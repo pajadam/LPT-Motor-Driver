@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LPT_Motor_Driver" />
+		<Option makefile="makefile" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Windows">
+				<Option output="bin/Windows/LPT_Motor_Driver" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Windows/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-pedantic" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-std=c++11" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="lib/Windows/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add option="SFML_STATIC" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-system-s" />
+					<Add library="winmm" />
+					<Add directory="lib/Windows/lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='&quot;scripts/release_windows.bat&quot;' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/driver/access.cpp" />
+		<Unit filename="src/driver/driver.cpp" />
+		<Unit filename="src/driver/driver.hpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/main.hpp" />
+		<Unit filename="src/ui/gui/gui.cpp" />
+		<Unit filename="src/ui/gui/gui.hpp" />
+		<Unit filename="src/ui/tui/tui.cpp" />
+		<Unit filename="src/ui/tui/tui.hpp" />
+		<Unit filename="src/ui/ui.cpp" />
+		<Unit filename="src/ui/ui.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,5 @@
+obj/*
+lib/Windows/lib/*
+lib/Windows/bin/*
+lib/Windows/include/*
+bin/*

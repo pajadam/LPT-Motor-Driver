@@ -1,0 +1,104 @@
+# depslib dependency file v1.0
+1459205870 source:e:\1.programowanie\sterowniklpt\src\main.cpp
+	"main.hpp"
+
+1263177236 e:\1.programowanie\sterowniklpt\src\dll\winio.h
+	"..\drv\winio_nt.h"
+
+1273355572 e:\1.programowanie\sterowniklpt\src\drv\winio_nt.h
+
+1459218815 source:e:\1.programowanie\sterowniklpt\src\driver.cpp
+	"driver.hpp"
+
+1459218772 e:\1.programowanie\sterowniklpt\src\driver.hpp
+	<windows.h>
+	<string>
+	<conio.h>
+	<iostream>
+	<chrono>
+	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
+
+1459205332 source:e:\1.programowanie\sterowniklpt\src\gui.cpp
+	"gui.hpp"
+
+1459205341 e:\1.programowanie\sterowniklpt\src\gui.hpp
+
+1459205668 e:\1.programowanie\sterowniklpt\src\main.hpp
+	<iostream>
+	"driver.hpp"
+	"gui.hpp"
+
+1429784053 e:\1.programowanie\sterowniklpt\lib\windows\include\sfml\system\time.hpp
+	<SFML/System/Export.hpp>
+
+1429784053 e:\1.programowanie\sterowniklpt\lib\windows\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1441980490 e:\1.programowanie\sterowniklpt\lib\windows\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1429784053 e:\1.programowanie\sterowniklpt\lib\windows\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1459389919 source:e:\1.programowanie\lpt_motor_driver\src\driver\access.cpp
+	"driver.hpp"
+
+1459389956 e:\1.programowanie\lpt_motor_driver\src\driver\driver.hpp
+	<windows.h>
+	<mutex>
+	<iostream>
+	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
+
+1429784053 e:\1.programowanie\lpt_motor_driver\lib\windows\include\sfml\system\time.hpp
+	<SFML/System/Export.hpp>
+
+1429784053 e:\1.programowanie\lpt_motor_driver\lib\windows\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1441980490 e:\1.programowanie\lpt_motor_driver\lib\windows\include\sfml\config.hpp
+	"TargetConditionals.h"
+
+1429784053 e:\1.programowanie\lpt_motor_driver\lib\windows\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1459375342 source:e:\1.programowanie\lpt_motor_driver\src\driver\driver.cpp
+	"driver.hpp"
+
+1459387990 source:e:\1.programowanie\lpt_motor_driver\src\main.cpp
+	"main.hpp"
+
+1459377297 e:\1.programowanie\lpt_motor_driver\src\main.hpp
+	<iostream>
+	<thread>
+	"driver/driver.hpp"
+	"ui/gui/gui.hpp"
+	"ui/tui/tui.hpp"
+	"ui/ui.hpp"
+
+1459378811 e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.hpp
+	"../../driver/driver.hpp"
+	"../ui.hpp"
+
+1459379986 e:\1.programowanie\lpt_motor_driver\src\ui\ui.hpp
+	"../driver/driver.hpp"
+
+1459392649 e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.hpp
+	"../../driver/driver.hpp"
+	"../ui.hpp"
+	<windows.h>
+	<iostream>
+	<string>
+
+1459379374 source:e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.cpp
+	"gui.hpp"
+
+1459389721 source:e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.cpp
+	"tui.hpp"
+
+1459384971 source:e:\1.programowanie\lpt_motor_driver\src\ui\ui.cpp
+	"ui.hpp"
+
