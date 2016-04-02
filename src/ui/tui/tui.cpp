@@ -14,9 +14,11 @@ text_ui::~text_ui()
 void text_ui::showMainScheme()
 {
     place( "######################", 1, 1 );
-    place( "#  LPT Motor Driver  #", 1, 2 );
-    place( "#     by pajadam     #", 1, 3 );
-    place( "######################", 1, 4 );
+    place( "#                    #", 1, 2 );
+    place( "#  LPT Motor Driver  #", 1, 3 );
+    place( "#     by pajadam     #", 1, 4 );
+    place( "#                    #", 1, 5 );
+    place( "######################", 1, 6 );
     place( "SILNIK #1", 1, 10 );
     place( "SILNIK #2", 1, 12 );
     place( "STAN", 12, 8 );
@@ -26,7 +28,7 @@ void text_ui::showMainScheme()
 
 void text_ui::showUserInput()
 {
-    setCursorPos( 12, 14 );
+    setCursorPos( 13, 14 );
     place( "Twoj wybor:", 1, 14 );
 }
 

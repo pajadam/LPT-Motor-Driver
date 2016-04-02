@@ -25,13 +25,10 @@
 					<Add option="-pedantic" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
-					<Add option="-std=c++11" />
+					<Add option="-std=c++14" />
 					<Add option="-DSFML_STATIC" />
 					<Add directory="lib/Windows/include" />
 				</Compiler>
-				<ResourceCompiler>
-					<Add option="SFML_STATIC" />
-				</ResourceCompiler>
 				<Linker>
 					<Add option="-s" />
 					<Add library="sfml-system-s" />
@@ -51,6 +48,10 @@
 		<Unit filename="src/driver/driver.hpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/main.hpp" />
+		<Unit filename="src/res/icon.ico" />
+		<Unit filename="src/res/icon.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="src/ui/gui/gui.cpp" />
 		<Unit filename="src/ui/gui/gui.hpp" />
 		<Unit filename="src/ui/tui/tui.cpp" />

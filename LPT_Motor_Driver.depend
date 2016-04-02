@@ -86,7 +86,7 @@
 1459379986 e:\1.programowanie\lpt_motor_driver\src\ui\ui.hpp
 	"../driver/driver.hpp"
 
-1459392649 e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.hpp
+1459393221 e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.hpp
 	"../../driver/driver.hpp"
 	"../ui.hpp"
 	<windows.h>

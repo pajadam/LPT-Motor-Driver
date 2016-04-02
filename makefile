@@ -19,7 +19,7 @@ LIB =
 LDFLAGS = 
 
 INC_WINDOWS = $(INC) -Ilib\Windows\include
-CFLAGS_WINDOWS = $(CFLAGS) -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Wredundant-decls -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -pedantic -Wextra -Wall -std=c++11 -DSFML_STATIC
+CFLAGS_WINDOWS = $(CFLAGS) -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Wredundant-decls -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -pedantic -Wextra -Wall -std=c++14 -DSFML_STATIC
 RESINC_WINDOWS = $(RESINC)
 RCFLAGS_WINDOWS = $(RCFLAGS)
 LIBDIR_WINDOWS = $(LIBDIR) -Llib\Windows\lib
@@ -29,7 +29,7 @@ OBJDIR_WINDOWS = obj\\Windows
 DEP_WINDOWS = 
 OUT_WINDOWS = bin\\Windows\\LPT_Motor_Driver.exe
 
-OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\driver\\access.o $(OBJDIR_WINDOWS)\\src\\driver\\driver.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\ui\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\ui\\tui\\tui.o $(OBJDIR_WINDOWS)\\src\\ui\\ui.o
+OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\driver\\access.o $(OBJDIR_WINDOWS)\\src\\driver\\driver.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\res\\icon.o $(OBJDIR_WINDOWS)\\src\\ui\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\ui\\tui\\tui.o $(OBJDIR_WINDOWS)\\src\\ui\\ui.o
 
 all: windows
 
@@ -39,6 +39,7 @@ before_windows:
 	cmd /c if not exist bin\\Windows md bin\\Windows
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\driver md $(OBJDIR_WINDOWS)\\src\\driver
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src md $(OBJDIR_WINDOWS)\\src
+	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\res md $(OBJDIR_WINDOWS)\\src\\res
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\ui\\gui md $(OBJDIR_WINDOWS)\\src\\ui\\gui
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\ui\\tui md $(OBJDIR_WINDOWS)\\src\\ui\\tui
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\ui md $(OBJDIR_WINDOWS)\\src\\ui
@@ -60,6 +61,9 @@ $(OBJDIR_WINDOWS)\\src\\driver\\driver.o: src\\driver\\driver.cpp
 $(OBJDIR_WINDOWS)\\src\\main.o: src\\main.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\main.cpp -o $(OBJDIR_WINDOWS)\\src\\main.o
 
+$(OBJDIR_WINDOWS)\\src\\res\\icon.o: src\\res\\icon.rc
+	$(WINDRES) -i src\\res\\icon.rc -J rc -o $(OBJDIR_WINDOWS)\\src\\res\\icon.o -O coff $(INC_WINDOWS)
+
 $(OBJDIR_WINDOWS)\\src\\ui\\gui\\gui.o: src\\ui\\gui\\gui.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\ui\\gui\\gui.cpp -o $(OBJDIR_WINDOWS)\\src\\ui\\gui\\gui.o
 
@@ -74,6 +78,7 @@ clean_windows:
 	cmd /c rd bin\\Windows
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\driver
 	cmd /c rd $(OBJDIR_WINDOWS)\\src
+	cmd /c rd $(OBJDIR_WINDOWS)\\src\\res
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\ui\\gui
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\ui\\tui
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\ui
