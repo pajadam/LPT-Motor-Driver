@@ -7,7 +7,7 @@
 #include <SFML/System/Time.hpp>
 #include <SFML/System/Clock.hpp>
 
-#define p 0x378//data port address
+#define port 0x378
 
 #define FIRST 0
 #define SECOND 1

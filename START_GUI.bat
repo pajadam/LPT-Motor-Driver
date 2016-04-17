@@ -1,3 +1,3 @@
 @echo off
-echo GUI sie robi jeszcze :D Pracuje nad nim, bez spiny :P
+"%cd%/release/LPT_Motor_Driver.exe"
 PAUSE

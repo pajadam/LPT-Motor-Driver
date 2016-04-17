@@ -45,7 +45,7 @@
 1459389919 source:e:\1.programowanie\lpt_motor_driver\src\driver\access.cpp
 	"driver.hpp"
 
-1459389956 e:\1.programowanie\lpt_motor_driver\src\driver\driver.hpp
+1460161178 e:\1.programowanie\lpt_motor_driver\src\driver\driver.hpp
 	<windows.h>
 	<mutex>
 	<iostream>
@@ -65,13 +65,13 @@
 	<SFML/System/Export.hpp>
 	<SFML/System/Time.hpp>
 
-1459375342 source:e:\1.programowanie\lpt_motor_driver\src\driver\driver.cpp
+1460161231 source:e:\1.programowanie\lpt_motor_driver\src\driver\driver.cpp
 	"driver.hpp"
 
-1459387990 source:e:\1.programowanie\lpt_motor_driver\src\main.cpp
+1460245627 source:e:\1.programowanie\lpt_motor_driver\src\main.cpp
 	"main.hpp"
 
-1459377297 e:\1.programowanie\lpt_motor_driver\src\main.hpp
+1460245634 e:\1.programowanie\lpt_motor_driver\src\main.hpp
 	<iostream>
 	<thread>
 	"driver/driver.hpp"
@@ -79,9 +79,15 @@
 	"ui/tui/tui.hpp"
 	"ui/ui.hpp"
 
-1459378811 e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.hpp
+1460897432 e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.hpp
 	"../../driver/driver.hpp"
 	"../ui.hpp"
+	<nana/gui.hpp>
+	<nana/gui/wvl.hpp>
+	<nana/gui/widgets/button.hpp>
+	<nana/gui/widgets/label.hpp>
+	<nana/gui/widgets/slider.hpp>
+	<iostream>
 
 1459379986 e:\1.programowanie\lpt_motor_driver\src\ui\ui.hpp
 	"../driver/driver.hpp"
@@ -93,12 +99,176 @@
 	<iostream>
 	<string>
 
-1459379374 source:e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.cpp
+1460897007 source:e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.cpp
 	"gui.hpp"
 
-1459389721 source:e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.cpp
+1459445110 source:e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.cpp
 	"tui.hpp"
 
 1459384971 source:e:\1.programowanie\lpt_motor_driver\src\ui\ui.cpp
 	"ui.hpp"
+
+1458955087 source:e:\1.programowanie\lpt_motor_driver\src\res\icon.rc
+
+1411477910 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui.hpp
+	"gui/wvl.hpp"
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\wvl.hpp
+	"programming_interface.hpp"
+	"screen.hpp"
+	"widgets/form.hpp"
+	"drawing.hpp"
+	"msgbox.hpp"
+	"place.hpp"
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\programming_interface.hpp
+	<nana/config.hpp>
+	"effects.hpp"
+	"detail/general_events.hpp"
+	"detail/color_schemes.hpp"
+	<nana/paint/image.hpp>
+	<memory>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\config.hpp
+	"c++defines.hpp"
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\c++defines.hpp
+	<iosfwd>
+	<iosfwd>
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\effects.hpp
+	<cstddef>
+	<nana/paint/graphics.hpp>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\paint\graphics.hpp
+	"../basic_types.hpp"
+	"../gui/basis.hpp"
+	"pixel_buffer.hpp"
+	<memory>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\basic_types.hpp
+	<nana/deploy.hpp>
+	<cctype>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\deploy.hpp
+	<nana/config.hpp>
+	<nana/verbose_preprocessor.hpp>
+	<stdexcept>
+	<nana/charset.hpp>
+	<cstddef>
+	<memory>
+	<type_traits>
+	<utility>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\verbose_preprocessor.hpp
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\charset.hpp
+	<string>
+
+1447698439 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\basis.hpp
+	"../basic_types.hpp"
+	"../traits.hpp"
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\traits.hpp
+	<type_traits>
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\paint\pixel_buffer.hpp
+	<nana/gui/basis.hpp>
+	<memory>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\general_events.hpp
+	<nana/gui/basis.hpp>
+	"event_code.hpp"
+	"internal_scope_guard.hpp"
+	<type_traits>
+	<functional>
+	<memory>
+	<vector>
+
+1409504594 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\event_code.hpp
+
+1410793490 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\internal_scope_guard.hpp
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\color_schemes.hpp
+	"widget_colors.hpp"
+
+1423354491 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\widget_colors.hpp
+	<nana/gui/basis.hpp>
+	<memory>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\paint\image.hpp
+	"graphics.hpp"
+
+1439499756 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\screen.hpp
+	"basis.hpp"
+	<functional>
+	<memory>
+
+1439499756 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\form.hpp
+	"widget.hpp"
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\widget.hpp
+	"../basis.hpp"
+	"../programming_interface.hpp"
+	<nana/internationalization.hpp>
+	<nana/gui/detail/drawer.hpp>
+	<functional>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\internationalization.hpp
+	"basic_types.hpp"
+	<vector>
+	<sstream>
+	<functional>
+	<memory>
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\detail\drawer.hpp
+	<vector>
+	"general_events.hpp"
+	<nana/paint/graphics.hpp>
+	<functional>
+
+1413452818 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\drawing.hpp
+	"widgets/widget.hpp"
+	"../traits.hpp"
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\msgbox.hpp
+	<sstream>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\place.hpp
+	<nana/gui/basis.hpp>
+	<utility>
+	<memory>
+	<functional>
+
+1454911060 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\button.hpp
+	"widget.hpp"
+	<nana/gui/element.hpp>
+
+1447170667 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\element.hpp
+	<nana/paint/graphics.hpp>
+	<nana/pat/cloneable.hpp>
+	<vector>
+	<map>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\pat\cloneable.hpp
+	<nana/c++defines.hpp>
+	<cstddef>
+	<type_traits>
+	<memory>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\menu.hpp
+	"widget.hpp"
+	<vector>
+	<nana/gui/timer.hpp>
+	<nana/pat/cloneable.hpp>
+
+1423354491 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\timer.hpp
+	<nana/gui/detail/general_events.hpp>
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\label.hpp
+	"widget.hpp"
+
+1454911061 e:\1.programowanie\lpt_motor_driver\lib\windows\include\nana\gui\widgets\slider.hpp
+	"widget.hpp"
+	<nana/pat/cloneable.hpp>
 

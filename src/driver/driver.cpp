@@ -30,7 +30,7 @@ Driver::Driver()
 
     if (in(0xFF))
     {
-        out(p,0x00);
+        out(port,0x00);
     }
 
     motor[ FIRST  ].direction = DEFAULT_DIRECTION;
@@ -44,21 +44,21 @@ Driver::Driver()
 
 Driver::~Driver()
 {
-    out(p,0x00);
+    out(port,0x00);
 }
 
 void Driver::process()
 {
     if( motor[FIRST].turnedOn && motor[SECOND].turnedOn )
     {
-        out(p,0x00+steps[ driver_step[ FIRST ] ] + steps[ driver_step[ SECOND ] + 8 ] );
+        out(port,0x00+steps[ driver_step[ FIRST ] ] + steps[ driver_step[ SECOND ] + 8 ] );
     }else
     if( motor[FIRST].turnedOn )
     {
-        out(p,0x00+steps[ driver_step[ FIRST ] ] );
+        out(port,0x00+steps[ driver_step[ FIRST ] ] );
     }else
     {
-        out(p,0x00+steps[ driver_step[ SECOND ] + 8 ] );
+        out(port,0x00+steps[ driver_step[ SECOND ] + 8 ] );
     }
 }
 

@@ -41,11 +41,7 @@ int main( int argc, char **argv )
 
     if( argc == 1 )
     {
-        //TUTAJ JEDZIEMY NORMALNE GUI :D
-        cout << "Only Console mode is implemented for now." << endl;
-        cout << "You must run this program using: " << endl << argv[0] << " -console" << endl;
-        cin.get();
-
+        driver = new Driver();
         thread tr( StartThread );
 
         _ui = new graphic_ui( driver );
