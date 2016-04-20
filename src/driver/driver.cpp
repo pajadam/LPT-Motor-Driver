@@ -2,7 +2,7 @@
 
 Driver::Driver()
 {
-    hLib = LoadLibrary("inpout32.dll");
+    hLib = LoadLibrary("data/inpout32.dll");
     if (hLib == NULL)
     {
         cout << "Failed to load 'inpout32.dll'" << endl;

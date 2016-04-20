@@ -1,7 +1,8 @@
 #include "gui.hpp"
 
 graphic_ui::graphic_ui( Driver *_driver )
-:state(ui,      nana::rectangle(20,   STATE_HEIGHT + 5, 60, 30))
+:ui( API::make_center(300, 225), appearance(true,true,true,false,true,false,false )	 )
+,state(ui,      nana::rectangle(20,   STATE_HEIGHT + 5, 60, 30))
 ,state1(ui,     nana::rectangle(80,   STATE_HEIGHT, 100, 30))
 ,state2(ui,     nana::rectangle(190,  STATE_HEIGHT, 100, 30))
 
@@ -11,13 +12,13 @@ graphic_ui::graphic_ui( Driver *_driver )
 
 ,speed(ui,      nana::rectangle(20,   SPEED_HEIGHT + 5, 60, 30))
 ,speed1(ui,     nana::rectangle(115,  SPEED_HEIGHT + 40, 60, 30))
-,speed2(ui,     nana::rectangle(225,  SPEED_HEIGHT + 40, 60, 30))
+,speed2(ui,     nana::rectangle(205,  SPEED_HEIGHT + 40, 60, 30))
 
 ,slid1(ui,      nana::rectangle(80,   SPEED_HEIGHT, 30, 100))
 ,sless1(ui,     nana::rectangle(112,   SPEED_HEIGHT + 70, 30, 30))
 ,smore1(ui,     nana::rectangle(112,   SPEED_HEIGHT, 30, 30))
 
-,slid2(ui,      nana::rectangle(190,  SPEED_HEIGHT, 30, 100))
+,slid2(ui,      nana::rectangle(255,  SPEED_HEIGHT, 30, 100))
 ,sless2(ui,     nana::rectangle(222,   SPEED_HEIGHT + 70, 30, 30))
 ,smore2(ui,     nana::rectangle(222,   SPEED_HEIGHT, 30, 30))
 
@@ -27,6 +28,10 @@ graphic_ui::graphic_ui( Driver *_driver )
     driver = _driver;
 
     ui.caption( TITLE );
+
+    paint::image icon("data/icon.ico");
+    API::window_icon( ui, icon );
+
 
     state1.caption( STATE_OFF );
     state2.caption( STATE_OFF );
@@ -52,9 +57,46 @@ graphic_ui::graphic_ui( Driver *_driver )
     speed1.caption( to_string( DEFAULT_TIMESTEP ) + " [ms]" );
     speed2.caption( to_string( DEFAULT_TIMESTEP ) + " [ms]" );
 
+    ui.events().key_press(
+        [&]( const nana::arg_keyboard &keyboard )
+        {
+            if( keyboard.key == 65 )
+            {
+                motor[ FIRST ].turnedOn = true;
+                state1.caption( STATE_ON );
+                driver->setMotor( FIRST, motor[ FIRST ] );
+            }else
+            if( keyboard.key == 68 )
+            {
+                motor[ SECOND ].turnedOn = true;
+                state2.caption( STATE_ON );
+                driver->setMotor( SECOND, motor[ SECOND ] );
+            }
+        }
+    );
+
+    ui.events().key_release(
+        [&]( const nana::arg_keyboard &keyboard )
+        {
+            std::cout << "KEY: "<< keyboard.key << std::endl;
+            if( keyboard.key == 65 )
+            {
+                motor[ FIRST ].turnedOn = false;
+                state1.caption( STATE_OFF );
+                driver->setMotor( FIRST, motor[ FIRST ] );
+            }else
+            if( keyboard.key == 68 )
+            {
+                motor[ SECOND ].turnedOn = false;
+                state2.caption( STATE_OFF );
+                driver->setMotor( SECOND, motor[ SECOND ] );
+            }
+        }
+    );
+
     /// MORE LESS #1
     smore1.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             slid1.move_step( false );
 
@@ -66,7 +108,7 @@ graphic_ui::graphic_ui( Driver *_driver )
         }
     );
     sless1.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             slid1.move_step( true );
 
@@ -78,7 +120,7 @@ graphic_ui::graphic_ui( Driver *_driver )
         }
     );
     smore2.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             slid2.move_step( false );
 
@@ -90,7 +132,7 @@ graphic_ui::graphic_ui( Driver *_driver )
         }
     );
     sless2.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             slid2.move_step( true );
 
@@ -104,7 +146,7 @@ graphic_ui::graphic_ui( Driver *_driver )
     ///
     /// STATE BUTTON #1
     state1.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             motor[ FIRST ].turnedOn = !motor[ FIRST ].turnedOn;
             if( motor[ FIRST ].turnedOn == true )
@@ -118,7 +160,7 @@ graphic_ui::graphic_ui( Driver *_driver )
     ///
     /// STATE BUTTON #2
     state2.events().click(
-        [&]( const nana::arg_click &eventinfo )
+        [&]()
         {
             motor[ SECOND ].turnedOn = !motor[ SECOND ].turnedOn;
             if( motor[ SECOND ].turnedOn == true )

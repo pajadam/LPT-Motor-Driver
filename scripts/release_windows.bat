@@ -14,11 +14,14 @@ cbp2make -in LPT_Motor_Driver.cbp -out makefile -targets "Windows" -windows >nul
 ECHO - Packing LPT_Motor_Driver.exe
 upx -q -9 bin\Windows\LPT_Motor_Driver.exe >nul
 ECHO - Creating release directory
+rd /s /q release\data >nul
 rd /s /q release >nul
 mkdir "release" >nul
+mkdir "release\data" >nul
 ECHO - Moving needed objects to
 ECHO   release folder
-copy "lib\Windows\release\inpout32.dll" "release\" >nul
+copy "lib\Windows\release\inpout32.dll" "release\data" >nul
+copy "src\res\icon.ico" "release\data" >nul
 copy "bin\Windows\LPT_Motor_Driver.exe" "release\" >nul
 ECHO Check out release folder
 ECHO DONE :D

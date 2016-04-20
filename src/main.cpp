@@ -41,6 +41,8 @@ int main( int argc, char **argv )
 
     if( argc == 1 )
     {
+        ShowWindow( GetConsoleWindow(), SW_HIDE );
+
         driver = new Driver();
         thread tr( StartThread );
 

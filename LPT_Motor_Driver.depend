@@ -65,13 +65,14 @@
 	<SFML/System/Export.hpp>
 	<SFML/System/Time.hpp>
 
-1460161231 source:e:\1.programowanie\lpt_motor_driver\src\driver\driver.cpp
+1461185981 source:e:\1.programowanie\lpt_motor_driver\src\driver\driver.cpp
 	"driver.hpp"
 
-1460245627 source:e:\1.programowanie\lpt_motor_driver\src\main.cpp
+1461189423 source:e:\1.programowanie\lpt_motor_driver\src\main.cpp
 	"main.hpp"
 
-1460245634 e:\1.programowanie\lpt_motor_driver\src\main.hpp
+1461186332 e:\1.programowanie\lpt_motor_driver\src\main.hpp
+	<windows.h>
 	<iostream>
 	<thread>
 	"driver/driver.hpp"
@@ -79,7 +80,7 @@
 	"ui/tui/tui.hpp"
 	"ui/ui.hpp"
 
-1460897432 e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.hpp
+1461190453 e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.hpp
 	"../../driver/driver.hpp"
 	"../ui.hpp"
 	<nana/gui.hpp>
@@ -99,7 +100,7 @@
 	<iostream>
 	<string>
 
-1460897007 source:e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.cpp
+1461189824 source:e:\1.programowanie\lpt_motor_driver\src\ui\gui\gui.cpp
 	"gui.hpp"
 
 1459445110 source:e:\1.programowanie\lpt_motor_driver\src\ui\tui\tui.cpp
